@@ -3,13 +3,17 @@
   "description": "Webcomponent christmas-tree following open-wc recommendations",
   "license": "MIT",
   "author": "manufosela",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "main": "index.js",
+  "main": "christmas-tree.js",
   "module": "index.js",
   "exports": {
     ".": "./index.js",
     "./christmas-tree.js": "./christmas-tree.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manufosela/christmas-tree"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",
