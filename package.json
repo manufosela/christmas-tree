@@ -3,7 +3,7 @@
   "description": "Webcomponent christmas-tree following open-wc recommendations",
   "license": "MIT",
   "author": "manufosela",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "christmas-tree.js",
   "module": "index.js",
