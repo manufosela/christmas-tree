@@ -19,8 +19,10 @@ export class ChristmasTree extends LitElement {
 
   constructor() {
     super();
+
+    this.colorsTree = ['#0a4a0a', '#228B22', '#2E5B27'];
     this.treeSize = '60px';
-    this.topPosition = 'calc(var(--tree-size) * 2.)';
+    this.topPosition = 'calc(var(--tree-size) * 2)';
     this.trunkColor = '#8b4513';
     this.light1Color = 'red';
     this.light1ShadowColor = 'blue';
@@ -42,6 +44,12 @@ export class ChristmasTree extends LitElement {
     this.style.setProperty('--light2-shadow-color', this.light2ShadowColor);
     this.style.setProperty('--top-ornament-color', this.topOrnamentColor);
     this.style.setProperty('--top-ornament-bg-color', this.topOrnamentBgColor);
+    this.style.setProperty('--blinking-time1', this.blinkingTime1);
+    this.style.setProperty('--blinking-time2', this.blinkingTime2);
+    this.style.setProperty(
+      '--tree-color',
+      this.colorsTree[Math.floor(Math.random() * this.colorsTree.length)],
+    );
     this.style.setProperty('top', `${parseFloat(this.treeSize) * 2.5}px`);
   }
 
