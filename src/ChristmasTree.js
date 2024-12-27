@@ -34,6 +34,17 @@ export class ChristmasTree extends LitElement {
     this.blinkingTime2 = '1.5s';
   }
 
+  set treeSize(value) {
+    const hasUnits = /\d+(px|em|rem|%)$/.test(value);
+    const formattedValue = hasUnits ? value : `${value}px`;
+    this._treeSize = formattedValue;
+    this.requestUpdate();
+  }
+
+  get treeSize() {
+    return this._treeSize;
+  }
+
   update(changedProperties) {
     super.update(changedProperties);
     this.style.setProperty('--tree-size', `${this.treeSize}`);
