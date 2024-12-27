@@ -21,6 +21,7 @@ export const ChristmasTreeStyles = css`
     --top-ornament-bg-color: red;
     --bliking-time1: 1s;
     --blinking-time2: 1.5s;
+    --tree-color: #0a4a0a;
   }
 
   .tree {
@@ -30,7 +31,7 @@ export const ChristmasTreeStyles = css`
     margin: 1rem;
     border-left: var(--tree-size) solid transparent;
     border-right: var(--tree-size) solid transparent;
-    border-bottom: calc(var(--tree-size) * 2) solid #0a4a0a;
+    border-bottom: calc(var(--tree-size) * 2) solid var(--tree-color, #0a4a0a);
   }
 
   .tree::before,
@@ -42,7 +43,7 @@ export const ChristmasTreeStyles = css`
     height: 0;
     border-left: var(--tree-size) solid transparent;
     border-right: var(--tree-size) solid transparent;
-    border-bottom: calc(var(--tree-size) * 2) solid #0a4a0a;
+    border-bottom: calc(var(--tree-size) * 2) solid var(--tree-color, #0a4a0a);
   }
 
   .tree::before {
