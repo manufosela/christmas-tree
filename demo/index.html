@@ -20,49 +20,56 @@
   </style>
 </head>
 <body>
-  <div id="demo"></div>
+  <div id="demo">
+    <christmas-tree tree-size="30" light1-color="green" light2-color="yellow"></christmas-tree>
+  </div>
 
   <script type="module">
     import '../christmas-tree.js';
 
-    const numTrees = 20;
-    const container = document.getElementById('demo');
-    const screenHeight = container.offsetHeight; // Altura total del contenedor
-    const colors = ['green', 'blue', 'red', 'gold', 'silver', 'purple', 'cyan']; // Lista de colores principales
+    // const NUMTREES = 30;
+    // const SEPARATION_TREES = 100;
+    // const LIGHTCOLORS = ['green', 'blue', 'red', 'gold', 'silver', 'yellow', 'red']; // Lista de colores principales
 
-    for (let christmasTreeCounter = 0; christmasTreeCounter < numTrees; christmasTreeCounter += 1) {
-      const tree = document.createElement('christmas-tree');
+    // const container = document.getElementById('demo');
+    // const screenHeight = container.offsetHeight; // Altura total del contenedor
 
-      let topPosition;
-      if (christmasTreeCounter < numTrees / 3) {
-        topPosition = Math.random() * (screenHeight * 0.3) + screenHeight * 0.7; // Entre 70% y 100% de la pantalla
-      } else if (christmasTreeCounter < (2 * numTrees) / 3) {
-        topPosition = Math.random() * (screenHeight * 0.2) + screenHeight * 0.4; // Entre 40% y 60%
-      } else {
-        topPosition = Math.random() * (screenHeight * 0.3); // Entre 0% y 30%
-      }
 
-      const treeSize = `${parseInt(30 + (topPosition * topPosition) / screenHeight * 0.2, 10)}px`;
-      const zIndex = parseInt(topPosition, 10);
-      const leftPosition = Math.random() * container.offsetWidth;
-      const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-      const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-      const blinkingTime1 = Math.random() * 2 + 1;
-      const blinkingTime2 = Math.random() * 2 + 1;
+    // for (let christmasTreeCounter = 0; christmasTreeCounter < NUMTREES; christmasTreeCounter += 1) {
+    //   const tree = document.createElement('christmas-tree');
 
-      tree.id = `tree-${christmasTreeCounter}`;
-      tree.style.position = 'absolute';
-      tree.style.top = `${topPosition}px`;
-      tree.style.left = `${leftPosition}px`;
-      tree.style.zIndex = zIndex;
-      tree.setAttribute('tree-size', treeSize);
-      tree.setAttribute('light1-color', randomColor1);
-      tree.setAttribute('light2-color', randomColor2);
-      tree.setAttribute('blinking-time1', blinkingTime1);
-      tree.setAttribute('blinking-time2', blinkingTime2);
+    //   let topPosition;
+    //   if (christmasTreeCounter < NUMTREES / 3) {
+    //     topPosition = Math.random() * (screenHeight * 0.2) + screenHeight * 0.7; // Entre 70% y 95% de la pantalla
 
-      container.appendChild(tree);
-    }
+    //   } else if (christmasTreeCounter < (2 * NUMTREES) / 3) {
+    //     topPosition = Math.random() * (screenHeight * 0.2) + screenHeight * 0.4; // Entre 40% y 60%
+
+    //   } else {
+    //     topPosition = Math.random() * (screenHeight * 0.1) + screenHeight * 0.1; // Entre 0% y 20%
+    //   }
+
+    //   const treeSize = `${parseInt(30 + (topPosition * topPosition) / screenHeight * 0.2, 10)}px`;
+    //   const zIndex = parseInt(topPosition, 10);
+    //   const leftPosition = Math.floor(Math.random() * ((container.offsetWidth - SEPARATION_TREES) / SEPARATION_TREES)) * SEPARATION_TREES;
+    //   const randomColor1 = LIGHTCOLORS[Math.floor(Math.random() * LIGHTCOLORS.length)];
+    //   const randomColor2 = LIGHTCOLORS[Math.floor(Math.random() * LIGHTCOLORS.length)];
+    //   const blinkingTime1 = Math.random() * 2 + 1;
+    //   const blinkingTime2 = Math.random() * 2 + 1;
+
+    //   tree.id = `tree-${christmasTreeCounter}`;
+    //   tree.style.position = 'absolute';
+    //   tree.style.top = `${topPosition}px`;
+    //   tree.style.left = `${leftPosition}px`;
+    //   tree.style.zIndex = zIndex;
+    //   tree.setAttribute('tree-size', treeSize);
+    //   tree.setAttribute('light1-color', randomColor1);
+    //   tree.setAttribute('light2-color', randomColor2);
+    //   tree.setAttribute('blinking-time1', blinkingTime1);
+    //   tree.setAttribute('blinking-time2', blinkingTime2);
+
+    //   container.appendChild(tree);
+    // }
   </script>
 </body>
 </html>
